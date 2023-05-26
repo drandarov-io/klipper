@@ -15,7 +15,7 @@ jobs:
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
           # Repository name to clone.
-          upstream_repository: https://github.com/Klipper3d/klipper.git
+          upstream_repository: Klipper3d/klipper
           # Repository name to push. Default or empty value represents current github repository (${GITHUB_REPOSITORY})
           target_repository: ${GITHUB_REPOSITORY}
           # Source branch from which changes will be pushed.
