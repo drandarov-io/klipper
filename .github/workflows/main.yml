@@ -1,0 +1,24 @@
+name: Sync Fork
+
+on:
+  schedule:
+    - cron: '*/30 * * * *' # every 30 minutes
+  workflow_dispatch: # on button click
+
+jobs:
+  sync:
+
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: TobKed/github-forks-sync-action@v0.2.0
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          # Repository name to clone.
+          upstream_repository: https://github.com/Klipper3d/klipper.git
+          # Repository name to push. Default or empty value represents current github repository (${GITHUB_REPOSITORY})
+          target_repository: ${GITHUB_REPOSITORY}
+          # Source branch from which changes will be pushed.
+          upstream_branch: master
+          # Destination branch to push changes.
+          target_branch: dgus-display
