@@ -17,7 +17,7 @@ jobs:
           # Repository name to clone.
           upstream_repository: Klipper3d/klipper
           # Repository name to push. Default or empty value represents current github repository (${GITHUB_REPOSITORY})
-          target_repository: ${GITHUB_REPOSITORY}
+          target_repository: ${{GITHUB_REPOSITORY}}
           # Source branch from which changes will be pushed.
           upstream_branch: master
           # Destination branch to push changes.
